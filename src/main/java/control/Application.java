@@ -25,6 +25,7 @@ public class Application {
             System.out.println("Digite 2 para Cadastrar curso");
             System.out.println("Digite 3 para exibir todos os alunos");
             System.out.println("Digite 4 para exibir alunos de um curso");
+            System.out.println("Digite 5 para sair");
             menu = scanner.nextInt();
             switch (menu) {
                 case (1):
@@ -55,10 +56,12 @@ public class Application {
                     String escolha = scanner.nextLine();
                     alunoRepository.exibirAlunosdeCurso(emf,escolha);
                     break;
+                case(5):
+                    break;
                 }
             } catch (Exception e) {
 
                 e.printStackTrace();
-        }
+            }
     }
 }
